@@ -1,4 +1,4 @@
-name: Run integration tests for transferase
+name: transferase utilities integrations tests
 
 on:
   workflow_dispatch:
@@ -17,6 +17,6 @@ jobs:
           cmake -B build -DCMAKE_CXX_COMPILER=g++-14 -DCMAKE_BUILD_TYPE=Distribute
           cmake --build build -j4
           cmake --install build --prefix=/usr
-      - name: Run the test script
+      - name: Run the integration test script
         run: |
-          cd /data && ls -ltrh . && cat ./workflow.sh && ./workflow.sh .
+          cd /data && ./workflow.sh .
