@@ -9,14 +9,6 @@ jobs:
     container: andrewdavidsmith/transferase-test-data-small
     steps:
       - uses: actions/checkout@v4
-      - name: Build transferase
-        run: |
-          cd /tmp
-          git clone https://github.com/andrewdavidsmith/transferase.git
-          cd transferase
-          cmake -B build -DCMAKE_CXX_COMPILER=g++-14 -DCMAKE_BUILD_TYPE=Distribute
-          cmake --build build -j4
-          cmake --install build --prefix=/usr
       - name: Run the test script
         run: |
           cd /data && ls -ltrh . && cat ./workflow.sh && ./workflow.sh .
