@@ -17,3 +17,6 @@ jobs:
           cmake -B build -DCMAKE_CXX_COMPILER=g++-14 -DCMAKE_BUILD_TYPE=Distribute
           cmake --build build -j4
           cmake --install build --prefix=/usr
+      - name: Run the test script
+        run: |
+          cd /data && ./workflow.sh .
