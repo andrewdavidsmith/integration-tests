@@ -1,6 +1,9 @@
 name: transferase utilities integrations tests
 
+# Should run in the middle of the night (Pacific time)
 on:
+  schedule:
+    - cron: "* 12 * * *"
   workflow_dispatch:
 
 jobs:
