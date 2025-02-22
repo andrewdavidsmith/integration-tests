@@ -22,5 +22,4 @@ jobs:
           cmake --install build --prefix=/usr
       - name: Run the integration test script
         run: |
-          cd /data && cat ./workflow.sh
           cd /data && ./workflow.sh .
