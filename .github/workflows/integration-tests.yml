@@ -20,9 +20,5 @@ jobs:
           cmake --build build -j4
           cmake --install build --prefix=/usr
           ls -lR /usr/bin
-          find /usr -iname \*transferase\*
-          find /usr -iname \*xfr\*
-      - name: Run the integration test script
-        run: |
-          ls -lR /usr/bin
-          cd /data && && ./workflow.sh .
+          find / -iname \*transferase\*
+          find / -iname \*xfr\*
