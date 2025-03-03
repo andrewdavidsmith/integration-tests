@@ -16,7 +16,7 @@ jobs:
           cd /tmp
           git clone https://github.com/andrewdavidsmith/transferase.git
           cd transferase
-          cmake -B build -DCMAKE_VERBOSE_MAKEFILE=on -DCMAKE_CXX_COMPILER=g++-14 -DCMAKE_BUILD_TYPE=Release
+          cmake -B build -DCMAKE_CXX_COMPILER=g++ -DCMAKE_BUILD_TYPE=Release -G Ninja
           cmake --build build -j4
           cmake --install build --prefix=/usr
       - name: Run the integration test script
