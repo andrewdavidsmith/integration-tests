@@ -22,4 +22,5 @@ jobs:
           /usr/bin/xfr config --help
       - name: Run the integration test script
         run: |
+          cat /data/workflow.sh
           cd /data && ./workflow.sh .
