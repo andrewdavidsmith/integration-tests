@@ -13,6 +13,7 @@ jobs:
     steps:
       - name: Build transferase
         run: |
+          find / -name libdeflate\*
           cd /tmp
           git clone https://github.com/andrewdavidsmith/transferase.git
           cd transferase
