@@ -1,4 +1,4 @@
-name: transferase utilities integrations tests
+name: transferase integrations tests
 
 # Should run in the middle of the night (Pacific time)
 on:
