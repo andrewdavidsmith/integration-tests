@@ -22,4 +22,5 @@ jobs:
           cmake --install build --prefix=/usr
       - name: Run the integration test script
         run: |
+          curl -4 ifconfig.co
           cd /data && ./workflow.sh .
